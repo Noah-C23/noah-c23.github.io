@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Guess the Number Game</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Retro arcade font -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <section>
+        <h2>🎮 Guess the Number</h2>
+
+        <!-- Player name -->
+        <div id="player-section">
+            <label for="player-name">Enter your name:</label>
+            <input type="text" id="player-name" placeholder="Your name" />
+            <button id="start-btn" class="green">Start Game</button>
+        </div>
+
+        <!-- Game section -->
+        <div id="game-section" style="display: none;">
+            <label for="difficulty">Difficulty:</label>
+            <select id="difficulty">
+                <option value="20">Easy (1–20)</option>
+                <option value="100" selected>Medium (1–100)</option>
+                <option value="500">Hard (1–500)</option>
+            </select>
+
+            <input type="number" id="guess-input" placeholder="Enter your guess" />
+
+            <button id="submit-btn" class="green">Submit Guess</button>
+            <button id="restart-btn" class="red">Restart Game</button>
+            <button id="leaderboard-btn" class="blue">🏆 Show Leaderboard</button>
+
+            <div id="message">Select a difficulty and enter a guess!</div>
+            <div id="attempts">Attempts: 0</div>
+        </div>
+
+        <!-- Leaderboard -->
+        <div id="leaderboard" style="display: none;">
+            <h3>🏆 Leaderboard</h3>
+            <ul id="leaderboard-list"></ul>
+            <button id="close-leaderboard" class="red">Close</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
