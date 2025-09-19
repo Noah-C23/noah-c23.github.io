@@ -1,0 +1,194 @@
+body {
+    background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+    font-family: 'Press Start 2P', monospace;
+    color: #fff;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Game container */
+section {
+    background: #111;
+    border: 4px solid #00ffcc;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #00ffcc;
+    padding: 25px;
+    max-width: 350px;
+    width: 90%;
+    text-align: center;
+}
+
+/* Title */
+h2 {
+    font-size: 14px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #00ffcc;
+}
+
+/* Dropdown */
+select {
+    margin-bottom: 15px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 2px solid #00ffcc;
+    background: #222;
+    color: #00ffcc;
+    font-family: inherit;
+    font-size: 12px;
+    outline: none;
+}
+
+/* Input field */
+input {
+    padding: 10px;
+    font-size: 14px;
+    border: 2px solid #00ffcc;
+    border-radius: 8px;
+    outline: none;
+    text-align: center;
+    margin-bottom: 15px;
+    width: 100%;
+    background: #222;
+    color: #00ffcc;
+}
+
+input:focus {
+    border-color: #ff00cc;
+    box-shadow: 0 0 10px #ff00cc;
+}
+
+/* Buttons */
+button {
+    padding: 12px;
+    font-size: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #fff;
+    margin: 6px 0;
+    width: 100%;
+    font-weight: bold;
+    transition: 0.2s;
+    letter-spacing: 1px;
+}
+
+button.green {
+    background: #28a745;
+    box-shadow: 0 0 10px #28a745;
+}
+
+button.green:hover {
+    background: #218838;
+    box-shadow: 0 0 20px #28a745;
+}
+
+button.red {
+    background: #dc3545;
+    box-shadow: 0 0 10px #dc3545;
+}
+
+button.red:hover {
+    background: #c82333;
+    box-shadow: 0 0 20px #dc3545;
+}
+
+button.blue {
+    background: #007bff;
+    box-shadow: 0 0 10px #007bff;
+}
+
+button.blue:hover {
+    background: #0069d9;
+    box-shadow: 0 0 20px #007bff;
+}
+
+/* Game messages */
+#message {
+    margin-top: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    min-height: 40px;
+    padding: 10px;
+    background: #222;
+    border: 2px solid #00ffcc;
+    border-radius: 8px;
+    box-shadow: inset 0 0 10px #00ffcc;
+}
+
+/* Attempts counter */
+#attempts {
+    margin-top: 10px;
+    font-size: 12px;
+    text-shadow: 0 0 5px #ff00cc;
+}
+
+/* Leaderboard container */
+#leaderboard {
+    margin-top: 20px;
+    padding: 20px;
+    background: #111;
+    border: 4px solid #ff00cc;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #ff00cc;
+    font-size: 12px;
+    text-align: center;
+    animation: popIn 0.3s ease-out;
+}
+
+/* Leaderboard title */
+#leaderboard h3 {
+    text-align: center;
+    text-shadow: 0 0 15px #00ffcc, 0 0 25px #ff00cc;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+/* List styling */
+#leaderboard ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+/* Each entry */
+#leaderboard li {
+    padding: 8px;
+    margin: 5px 0;
+    background: #222;
+    border: 2px solid #00ffcc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #00ffcc;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s;
+}
+
+#leaderboard li:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ff00cc;
+}
+
+/* Player rank icon */
+#leaderboard li::before {
+    content: "🎯";
+    margin-right: 8px;
+}
+
+/* Smooth popup animation */
+@keyframes popIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
